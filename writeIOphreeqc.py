@@ -26,6 +26,9 @@ def writeInput(filename, pars, values):
     # Write the file out again                                                                                                                                   
     with open(filename+'.txt', 'w') as f:
         f.write(c)
+
+    # Close the file
+    f.close()
         
 # read PHREEQC output
 def readOutput(filename, n):
@@ -39,6 +42,7 @@ def readOutput(filename, n):
         c = f.readline()
         result = re.split(r"[\s,\"]+",c)	
         obs.append(float(result[3]))
+    f.close()
     return obs
 
 # read observation/measured values
@@ -49,6 +53,7 @@ def readobs(filename,n):
         c = f.readline()
         print(c)
         obs.append(float(c[1:(len(c)-1)]))
+    f.close()
     return obs
 
     
