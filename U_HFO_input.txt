@@ -1,0 +1,481 @@
+TITLE Example 8.--Sorption of Uranium on hydrous iron oxides.
+#
+SELECTED_OUTPUT
+     -file U_HFO_Complexation_Output.sel
+     -reset false
+     -simulation true
+     -state true
+     -totals U
+     -pH true
+     -molalities     Hfo_sOUO2+ Hfo_wOUO2+ Hfo_wOUO2CO3- Hfo_wOUO2(CO3)2-3 Hfo_wOH Hfo_wO- Hfo_wOH2+ Hfo_sOH  Hfo_sO- Hfo_sOH2+
+     -high_precision false
+END
+#
+PHASES
+     Fix_H+
+     H+ = H+
+     log_k 0.0
+END
+#
+SOLUTION  1
+-units mol/kgw
+pH  3.55E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  1
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  1
+Fix_H+  -3.55E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  2
+-units mol/kgw
+pH  4.08E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  2
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  2
+Fix_H+  -4.08E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  3
+-units mol/kgw
+pH  4.63E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  3
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  3
+Fix_H+  -4.63E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  4
+-units mol/kgw
+pH  5.03E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  4
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  4
+Fix_H+  -5.03E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  5
+-units mol/kgw
+pH  5.49E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  5
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  5
+Fix_H+  -5.49E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  6
+-units mol/kgw
+pH  5.93E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  6
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  6
+Fix_H+  -5.93E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  7
+-units mol/kgw
+pH  6.37E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  7
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  7
+Fix_H+  -6.37E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  8
+-units mol/kgw
+pH  6.89E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  8
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  8
+Fix_H+  -6.89E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  9
+-units mol/kgw
+pH  7.23E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  9
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  9
+Fix_H+  -7.23E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  10
+-units mol/kgw
+pH  7.61E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  10
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  10
+Fix_H+  -7.61E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  11
+-units mol/kgw
+pH  8.15E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  11
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  11
+Fix_H+  -8.15E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  12
+-units mol/kgw
+pH  9.00E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  12
+-no_edl
+
+     Hfo_sOH        5e-6    600.    0.09
+     Hfo_wOH        2e-4
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  12
+Fix_H+  -9.00E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  13
+-units mol/kgw
+pH  1.00E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  13
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  13
+Fix_H+  -1.00E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  14
+-units mol/kgw
+pH  3.53E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  14
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  14
+Fix_H+  -3.53E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  15
+-units mol/kgw
+pH  4.05E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  15
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  15
+Fix_H+  -4.05E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  16
+-units mol/kgw
+pH  4.63E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  16
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  16
+Fix_H+  -4.63E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  17
+-units mol/kgw
+pH  5.02E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  17
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  17
+Fix_H+  -5.02E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  18
+-units mol/kgw
+pH  5.49E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  18
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  18
+Fix_H+  -5.49E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  19
+-units mol/kgw
+pH  5.91E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  19
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  19
+Fix_H+  -5.91E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  20
+-units mol/kgw
+pH  6.36E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  20
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  20
+Fix_H+  -6.36E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  21
+-units mol/kgw
+pH  6.86E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  21
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  21
+Fix_H+  -6.86E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  22
+-units mol/kgw
+pH  7.20E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  22
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  22
+Fix_H+  -7.20E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  23
+-units mol/kgw
+pH  7.59E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  23
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  23
+Fix_H+  -7.59E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  24
+-units mol/kgw
+pH  8.13E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  24
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  24
+Fix_H+  -8.13E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
+SOLUTION  25
+-units mol/kgw
+pH  8.98E+00
+U(+6)  1.00E-06
+Na  1.00E-01
+Cl  1.00E-01 charge
+SURFACE  25
+-no_edl
+
+Hfo_sOH  2.31E+00  2.00E-01  1.25E+01
+#  sites/nm2  m2/g  g/L
+#  -donnan
+EQUILIBRIUM_PHASES  25
+Fix_H+  -8.98E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+END
