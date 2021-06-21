@@ -31,11 +31,11 @@ def writeInput(filename, pars, values):
     f.close()
 
 
-# get col indices of "sim", "state", and "U" for use in readOutput,
+# helper function to get col indices of "sim", "state", and "U" for use in readOutput
 # so it can be more robust with different phreeqc output formats
-# takes in a file and reads one line, assuming it is the header
-# returns a list of 3 indices
-def getColIndices(file, key='U'):    
+def _getColIndices(file, key='U'):
+    # file: file object to read
+    # return: list of 3 indices for use in readOutput
     c = file.readline()
     headers = re.split(r"[\s,\"]+",c)
     
@@ -60,16 +60,17 @@ def getColIndices(file, key='U'):
         print(headers)
         return ValueError
     
-    print(headers)
+    # print(headers)
     return [sim, state, U]
     
 # read PHREEQC output
 def readOutput(filename, analyte='U'):
     # filename: output .sel file name
     # analyte: name of analyte to find. defaults to U concentration
+    # return: 2-row np array of simulation# vs analyte concentration
     
     f = open(filename, 'r')
-    idcs = getColIndices(f, analyte)
+    idcs = _getColIndices(f, analyte)
     
     # exit if failed to read columns
     if idcs == ValueError:
@@ -77,26 +78,28 @@ def readOutput(filename, analyte='U'):
         f.close()
         return
     
-    # assign indices and read rest of file if getColIndicies didn't error
+    # assign indices and finish reading the file if getColIndicies didn't error
     i_sm, i_st, i_U = idcs
     obs = f.readlines()
     f.close()
 
     # filter out states for react state (assuming all states are i_soln or react)
     obs = [re.split(r"[\s,\"]+",ln) for ln in obs if re.split(r"[\s,\"]+",ln)[i_st] == "react"]
-    print(obs)
-    print([int(row[i_sm]) for row in obs])
-    print([float(row[i_U]) for row in obs])
+    #print(obs)
+    
+    # these are the simulations:
+#     print([int(row[i_sm]) for row in obs])
+    # these are the concentrations:
+#     print([float(row[i_U]) for row in obs])
+
     # set up output matrix
     # apparently pandas > numpy in cases of > 500K rows
     # http://gouthamanbalaraman.com/blog/numpy-vs-pandas-comparison.html
-    opt = np.array([[int(row[i_sm]) for row in obs], [float(row[i_U]) for row in obs]])
-    
-    #for ln in obs:
-        #print(re.split(r"[\s,\"]+",ln)[i_sm])
-        #sim, stt, U = obs[idcs]
-    
+    opt = np.array([(int(row[i_sm]), float(row[i_U])) for row in obs]).T
+    #opt.sort(0)
     return opt
+
+
 # read observation/measured values
 def readobs(filename,n):
     f = open(filename, 'r')
