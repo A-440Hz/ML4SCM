@@ -1,0 +1,141 @@
+TITLE Example 8.--Sorption of Uranium on hydrous iron oxides.
+#
+SELECTED_OUTPUT
+     -file U_HFO_Complexation_Output_Trial3.sel
+     -reset false
+     -simulation true
+     -state true
+     -totals U
+     -pH true
+     -molalities     Hfo_sOUO2+ Hfo_wOUO2+ Hfo_wOUO2CO3- Hfo_wOUO2(CO3)2-3 Hfo_wOH Hfo_wO- Hfo_wOH2+ Hfo_sOH  Hfo_sO- Hfo_sOH2+
+     -high_precision false
+#
+PHASES
+     Fix_H+
+     H+ = H+
+     log_k 0.0
+#
+SOLUTION  1
+-units mol/kgw
+pH  3.56
+Na 0.1
+N  0.1
+U  1E-7
+Cl 0.1 charge
+
+SOLUTION  2
+-units mol/kgw
+pH  4.08
+Na 0.1
+N  0.1
+U  1E-7
+Cl 0.1 charge
+
+SOLUTION  3
+-units mol/kgw
+pH  4.52
+Na 0.1
+N  0.1
+U  1E-7
+Cl 0.1 charge
+
+SOLUTION  4
+-units mol/kgw
+pH  5.00
+Na 0.1
+N  0.1
+U  1E-7
+Cl 0.1 charge
+
+SOLUTION  5
+-units mol/kgw
+pH  5.48
+Na 0.1
+N  0.1
+U  1E-7
+Cl 0.1 charge
+
+SOLUTION  6
+-units mol/kgw
+pH  5.94
+Na 0.1
+N  0.1
+U  1E-7
+Cl 0.1 charge
+
+SURFACE  1-6
+-no_edl
+-sites_units density
+
+     Hfo_sOH        0.056    600.    0.1069
+     Hfo_wOH        2.254
+#  sites/nm2  m2/g  g/L
+#  -donnan
+
+EQUILIBRIUM_PHASES  1
+Fix_H+  -3.56E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+
+EQUILIBRIUM_PHASES  2
+Fix_H+  -4.08E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+
+EQUILIBRIUM_PHASES  3
+Fix_H+  -4.52E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+
+EQUILIBRIUM_PHASES  4
+Fix_H+  -5.00E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+
+EQUILIBRIUM_PHASES  5
+Fix_H+  -5.48E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+
+EQUILIBRIUM_PHASES  6
+Fix_H+  -5.94E+00  NaOH  0.1
+#  N2(g)  -9.69E-02  10.0
+O2(g)  -6.99E-01  10.0
+CO2(g)  -3.44E+00  10.0
+
+END
+
+USE SOLUTION 2
+USE SURFACE 2
+USE EQUILIBRIUM_PHASES 2
+
+END
+
+USE SOLUTION 3
+USE SURFACE 3
+USE EQUILIBRIUM_PHASES 3
+
+END
+
+USE SOLUTION 4
+USE SURFACE 4
+USE EQUILIBRIUM_PHASES 4
+
+END
+
+USE SOLUTION 5
+USE SURFACE 5
+USE EQUILIBRIUM_PHASES 5
+
+END
+
+USE SOLUTION 6
+USE SURFACE 6
+USE EQUILIBRIUM_PHASES 6
+
+END
